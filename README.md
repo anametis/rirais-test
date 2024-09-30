@@ -1,7 +1,29 @@
 Wall Component Project
 ======================
 
-This project implements a **Wall** for managing sticky notes with features like adding, editing, deleting, and moving notes. The note colors dynamically shift based on the proximity to a user-defined deadline, turning from green to yellow, orange, red, and finally black as the deadline approaches or expires. The project is built with **Next.js**, **TypeScript**, **Redux**, **Tailwind CSS**, and **ShadCN UI**.
+Here's an improved version of the text:
+
+This project implements a dynamic **Digital Wall** for efficient sticky note management. Key features include:
+
+- Adding, editing, deleting, and repositioning notes
+
+- Color-coded deadline tracking (green → yellow → orange → red → black)
+
+- Responsive design for various devices
+
+Tech Stack:
+
+- **Next.js** for robust, server-side rendered React applications
+
+- **TypeScript** for enhanced code reliability and maintainability
+
+- **Redux** for scalable state management
+
+- **Tailwind CSS** for rapid, utility-first styling
+
+- **ShadCN UI** for consistent, customizable UI components
+
+While initially developed as a compact demonstration for Rira Company, the project's architecture is designed with extensibility in mind. The use of Redux facilitates potential evolution into a full-fledged Trello-like task management system, showcasing foresight in development practices.
 
 Features
 --------
@@ -51,7 +73,7 @@ Follow these steps to get the project running locally:
 
     Copy code
 
-    `git clone https://github.com/anametis/.git
+    `git clone https://github.com/anametis/rirais-test.git
     cd rirais-test`
 
 2.  **Install dependencies:**
@@ -71,35 +93,6 @@ Follow these steps to get the project running locally:
     `npm run dev`
 
 4.  **Open the app in your browser:** Navigate to `http://localhost:3000` to see the app in action.
-
-Project Structure
------------------
-
-arduino
-
-Copy code
-
-`.
-├── app
-│   ├── layout.tsx            // Layout component for the app
-│   └── page.tsx              // Main page component for the app
-├── components
-│   ├── Note.tsx              // Renders individual note with editing, deleting, and moving options
-│   ├── NoteForm.tsx          // Form for adding new notes
-│   └── Wall.tsx              // Main Wall component that displays notes
-├── store
-│   ├── store.ts              // Redux store setup
-│   └── notesSlice.ts         // Redux slice for handling note operations
-├── hooks
-│   └── useNotes.ts           // Custom hook for managing notes
-├── utils
-│   ├── DateUtils.ts          // Utility functions for date manipulation
-│   └── GetNoteColor.ts       // Function to get the color of a note based on its deadline
-├── lib
-│   └── utils.ts              // Utility functions for the project
-├── tailwind.config.js        // Tailwind CSS configuration
-├── README.md                 // Documentation
-└── package.json              // Project dependencies and scripts`
 
 Usage
 -----
