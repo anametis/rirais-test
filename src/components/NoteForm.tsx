@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNote } from '@/store/notesStore/notesSlice';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { Button } from './ui/button';
 
 const NoteForm: React.FC = () => {
   const [text, setText] = useState('');
@@ -18,19 +21,18 @@ const NoteForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
+    <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-60 md:w-96'>
+      <Textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Note text"
       />
-      <input
+      <Input
         type="datetime-local"
         value={deadline}
         onChange={(e) => setDeadline(e.target.value)}
       />
-      <button type="submit">Add Note</button>
+      <Button type="submit">Add Note</Button>
     </form>
   );
 };
